@@ -9,28 +9,28 @@ export default function Home() {
         width={1312}
         height={600}
       />
-      <div>
-        <div>
+      <div className="px-8 py-10 flex flex-col gap-8">
+        <div className="flex flex-col gap-6">
           <h1 className="text-preset-1 text-stone-900">
             Simple Omelette Recipe
           </h1>
-          <p>
+          <p className="text-preset-4">
             An easy and quick dish, perfect for any meal. This classic omelette
             combines beaten eggs cooked to perfection, optionally filled with
             your choice of cheese, vegetables, or meats.
           </p>
         </div>
-        <div>
-          <h3>Preparation time</h3>
-          <ul>
+        <div className="flex flex-col gap-4 bg-rose-50 p-6 rounded-xl">
+          <h3 className="text-rose-800 text-preset-3">Preparation time</h3>
+          <ul className="text-stone-600 text-preset-4">
             <li>Total: Approximately 10 minutes</li>
             <li>Preparation: 5 minutes</li>
             <li>Cooking: 5 minutes</li>
           </ul>
         </div>
-        <div>
-          <h2>Ingredients</h2>
-          <ul>
+        <div className="flex flex-col gap-6">
+          <h2 className="text-preset-2 text-brown-800">Ingredients</h2>
+          <ul className="text-stone-600 text-preset-4">
             <li>2-3 large eggs</li>
             <li>Salt, to taste</li>
             <li>Pepper, to taste</li>
@@ -40,9 +40,10 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div>
-          <h2>Instructions</h2>
-          <ol>
+        <hr className="text-stone-150" />
+        <div className="flex flex-col gap-6">
+          <h2 className="text-brown-800 text-preset-2">Instructions</h2>
+          <ol className="text-stone-600 text-preset-4">
             <li>
               Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
               pepper until they are well mixed. You can add a tablespoon of
@@ -71,9 +72,10 @@ export default function Home() {
             </li>
           </ol>
         </div>
-        <div>
-          <h2>Nutrition</h2>
-          <p>
+        <hr className="text-stone-150" />
+        <div className="flex flex-col gap-6">
+          <h2 className="text-brown-800 text-preset-2">Nutrition</h2>
+          <p className="text-preset-4 text-stone-600">
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
