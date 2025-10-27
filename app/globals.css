@@ -20,7 +20,8 @@
   --font-sans: var(--font-outfit); /* Body font */
 
   /* Typography Presets */
-  --font-size-preset-1: 40px;
+  --font-size-preset-1-mobile: 36px;
+  --font-size-preset-1-tablet: 40px;
   --line-height-preset-1: 100%;
 
   --font-size-preset-2: 28px;
@@ -34,10 +35,18 @@
 }
 
 @layer utilities {
+  /* Mobile */
   .text-preset-1 {
     font-family: var(--font-serif);
-    font-size: var(--font-size-preset-1);
+    font-size: var(--font-size-preset-1-mobile);
     line-height: var(--line-height-preset-1);
+  }
+
+  /* Tablet/Desktop */
+  @media (min-width: 426px) {
+    .text-preset-1 {
+      font-size: var(--font-size-preset-1-tablet);
+    }
   }
 
   .text-preset-2 {

@@ -11,7 +11,7 @@ export default function Home() {
       />
       <div>
         <div>
-          <h1>Simple Omelette Recipe</h1>
+          <h1 className="text-preset-1">Simple Omelette Recipe</h1>
           <p>
             An easy and quick dish, perfect for any meal. This classic omelette
             combines beaten eggs cooked to perfection, optionally filled with
