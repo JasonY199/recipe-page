@@ -2,6 +2,7 @@ import RecipeHeader from "@/components/RecipeHeader";
 import PreparationTime from "@/components/PreparationTime";
 import IngredientsList from "@/components/IngredientsList";
 import InstructionsList from "@/components/InstructionsList";
+import NutritionTable from "@/components/NutritionTable";
 import { recipeData } from "@/data/recipe";
 
 import Image from "next/image";
@@ -22,42 +23,7 @@ export default function Home() {
         <hr className="text-stone-150" />
         <InstructionsList instructions={recipeData.instructions} />
         <hr className="text-stone-150" />
-        <div className="flex flex-col gap-6">
-          <h2 className="text-brown-800 text-preset-2">Nutrition</h2>
-          <p className="text-preset-4 text-stone-600">
-            The table below shows nutritional values per serving without the
-            additional fillings.
-          </p>
-          <div>
-            <div className="flex gap-4 mx-8">
-              <span className="flex-1 text-preset-4">Calories</span>{" "}
-              <span className="flex-1 text-preset-4-bold text-brown-800">
-                277kcal
-              </span>
-            </div>
-            <hr className="text-stone-150 my-3" />
-            <div className="flex gap-4 mx-8">
-              <span className="flex-1 text-preset-4">Carbs</span>{" "}
-              <span className="flex-1 text-preset-4-bold text-brown-800">
-                0g
-              </span>
-            </div>
-            <hr className="text-stone-150 my-3" />
-            <div className="flex gap-4 mx-8">
-              <span className="flex-1 text-preset-4">Protein</span>{" "}
-              <span className="flex-1 text-preset-4-bold text-brown-800">
-                20g
-              </span>
-            </div>
-            <hr className="text-stone-150 my-3" />
-            <div className="flex gap-4 mx-8">
-              <span className="flex-1 text-preset-4">Fat</span>{" "}
-              <span className="flex-1 text-preset-4-bold text-brown-800">
-                22g
-              </span>
-            </div>
-          </div>
-        </div>
+        <NutritionTable nutritionInfo={recipeData.nutrition} />
       </div>
     </article>
   );
