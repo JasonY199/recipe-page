@@ -1,3 +1,6 @@
+import RecipeHeader from "@/components/RecipeHeader";
+import { recipeData } from "@/data/recipe";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -10,16 +13,10 @@ export default function Home() {
         height={600}
       />
       <div className="px-8 py-10 flex flex-col gap-8">
-        <div className="flex flex-col gap-6">
-          <h1 className="text-preset-1 text-stone-900">
-            Simple Omelette Recipe
-          </h1>
-          <p className="text-preset-4">
-            An easy and quick dish, perfect for any meal. This classic omelette
-            combines beaten eggs cooked to perfection, optionally filled with
-            your choice of cheese, vegetables, or meats.
-          </p>
-        </div>
+        <RecipeHeader
+          title={recipeData.title}
+          description={recipeData.description}
+        />
         <div className="flex flex-col gap-4 bg-rose-50 p-6 rounded-xl">
           <h3 className="text-rose-800 text-preset-3">Preparation time</h3>
           <ul className="space-y-2 text-stone-600 text-preset-4">
