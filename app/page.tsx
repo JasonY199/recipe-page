@@ -1,5 +1,6 @@
 import RecipeHeader from "@/components/RecipeHeader";
 import PreparationTime from "@/components/PreparationTime";
+import IngredientsList from "@/components/IngredientsList";
 import { recipeData } from "@/data/recipe";
 
 import Image from "next/image";
@@ -23,33 +24,7 @@ export default function Home() {
           preparation={recipeData.preparationTime.preparation}
           cooking={recipeData.preparationTime.cooking}
         />
-        <div className="flex flex-col gap-6">
-          <h2 className="text-preset-2 text-brown-800">Ingredients</h2>
-          <ul className="space-y-2 text-stone-600 text-preset-4">
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-brown-800 font-bold">•</span>
-              <span>2-3 large eggs</span>
-            </li>
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-brown-800 font-bold">•</span>
-              <span>Salt, to taste</span>
-            </li>
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-brown-800 font-bold">•</span>
-              <span>Pepper, to taste</span>
-            </li>
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-brown-800 font-bold">•</span>
-              <span>1 tablespoon of butter or oil</span>
-            </li>
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-brown-800 font-bold">•</span>
-              <span>
-                Optional fillings: cheese, diced vegetables, cooked meats, herbs
-              </span>
-            </li>
-          </ul>
-        </div>
+        <IngredientsList ingredients={recipeData.ingredients} />
         <hr className="text-stone-150" />
         <div className="flex flex-col gap-6">
           <h2 className="text-brown-800 text-preset-2">Instructions</h2>
