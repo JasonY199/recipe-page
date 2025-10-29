@@ -1,4 +1,9 @@
-type PreparationTime = {
+export type Header = {
+  title: string;
+  description: string;
+};
+
+export type PreparationTime = {
   total: string;
   preparation: string;
   cooking: string;
@@ -9,26 +14,29 @@ export type Instruction = {
   description: string;
 };
 
-type NutritionItem = [number, string];
+export type NutritionItem = [number, string];
+
+export type Nutrition = {
+  calories: NutritionItem;
+  carbs: NutritionItem;
+  protein: NutritionItem;
+  fat: NutritionItem;
+};
 
 type Recipe = {
-  title: string;
-  description: string;
+  header: Header;
   preparationTime: PreparationTime;
   ingredients: string[];
   instructions: Instruction[];
-  nutrition: {
-    calories: NutritionItem;
-    carbs: NutritionItem;
-    protein: NutritionItem;
-    fat: NutritionItem;
-  };
+  nutrition: Nutrition;
 };
 
 export const recipeData: Recipe = {
-  title: "Simple Omelette Recipe",
-  description:
-    "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
+  header: {
+    title: "Simple Omelette Recipe",
+    description:
+      "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
+  },
 
   preparationTime: {
     total: "Approximately 10 minutes",

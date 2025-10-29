@@ -1,16 +1,14 @@
+import { Header } from "@/data/recipe";
+
 type RecipeHeaderProps = {
-  title: string;
-  description: string;
+  headerData: Header;
 };
 
-export default function RecipeHeader({
-  title,
-  description,
-}: RecipeHeaderProps) {
+export default function RecipeHeader({ headerData }: RecipeHeaderProps) {
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-preset-1 text-stone-900">{title}</h1>
-      <p className="text-preset-4">{description}</p>
+      <h1 className="text-preset-1 text-stone-900">{headerData.title}</h1>
+      <p className="text-preset-4">{headerData.description}</p>
     </div>
   );
 }

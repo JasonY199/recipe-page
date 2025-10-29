@@ -16,15 +16,8 @@ export default function Home() {
         height={600}
       />
       <div className="px-8 py-10 flex flex-col gap-8">
-        <RecipeHeader
-          title={recipeData.title}
-          description={recipeData.description}
-        />
-        <PreparationTime
-          total={recipeData.preparationTime.total}
-          preparation={recipeData.preparationTime.preparation}
-          cooking={recipeData.preparationTime.cooking}
-        />
+        <RecipeHeader headerData={recipeData.header} />
+        <PreparationTime timeData={recipeData.preparationTime} />
         <IngredientsList ingredients={recipeData.ingredients} />
         <hr className="text-stone-150" />
         <InstructionsList instructions={recipeData.instructions} />
