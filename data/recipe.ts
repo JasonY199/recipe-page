@@ -4,7 +4,7 @@ type PreparationTime = {
   cooking: string;
 };
 
-type Instruction = {
+export type Instruction = {
   title: string;
   description: string;
 };

@@ -1,6 +1,7 @@
 import RecipeHeader from "@/components/RecipeHeader";
 import PreparationTime from "@/components/PreparationTime";
 import IngredientsList from "@/components/IngredientsList";
+import InstructionsList from "@/components/InstructionsList";
 import { recipeData } from "@/data/recipe";
 
 import Image from "next/image";
@@ -26,57 +27,7 @@ export default function Home() {
         />
         <IngredientsList ingredients={recipeData.ingredients} />
         <hr className="text-stone-150" />
-        <div className="flex flex-col gap-6">
-          <h2 className="text-brown-800 text-preset-2">Instructions</h2>
-          <ol className="space-y-2 text-stone-600 text-preset-4">
-            <li className="flex gap-4 ml-2">
-              <span className="text-brown-800 font-bold w-4 shrink-0">1.</span>
-              <span>
-                <strong>Beat the eggs</strong>: In a bowl, beat the eggs with a
-                pinch of salt and pepper until they are well mixed. You can add
-                a tablespoon of water or milk for a fluffier texture.
-              </span>
-            </li>
-            <li className="flex gap-4 ml-2">
-              <span className="text-brown-800 font-bold w-4 shrink-0">2.</span>
-              <span>
-                <strong>Heat the pan</strong>: Place a non-stick frying pan over
-                medium heat and add butter or oil.
-              </span>
-            </li>
-            <li className="flex gap-4 ml-2">
-              <span className="text-brown-800 font-bold w-4 shrink-0">3.</span>
-              <span>
-                <strong>Cook the omelette</strong>: Once the butter is melted
-                and bubbling, pour in the eggs. Tilt the pan to ensure the eggs
-                evenly coat the surface.
-              </span>
-            </li>
-            <li className="flex gap-4 ml-2">
-              <span className="text-brown-800 font-bold w-4 shrink-0">4.</span>
-              <span>
-                <strong>Add fillings (optional)</strong>: When the eggs begin to
-                set at the edges but are still slightly runny in the middle,
-                sprinkle your chosen fillings over one half of the omelette.
-              </span>
-            </li>
-            <li className="flex gap-4 ml-2">
-              <span className="text-brown-800 font-bold w-4 shrink-0">5.</span>
-              <span>
-                <strong>Fold and serve</strong>: As the omelette continues to
-                cook, carefully lift one edge and fold it over the fillings. Let
-                it cook for another minute, then slide it onto a plate.
-              </span>
-            </li>
-            <li className="flex gap-4 ml-2">
-              <span className="text-brown-800 font-bold w-4 shrink-0">6.</span>
-              <span>
-                <strong>Enjoy</strong>: Serve hot, with additional salt and
-                pepper if needed.
-              </span>
-            </li>
-          </ol>
-        </div>
+        <InstructionsList instructions={recipeData.instructions} />
         <hr className="text-stone-150" />
         <div className="flex flex-col gap-6">
           <h2 className="text-brown-800 text-preset-2">Nutrition</h2>
