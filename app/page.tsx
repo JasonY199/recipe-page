@@ -1,4 +1,5 @@
 import RecipeHeader from "@/components/RecipeHeader";
+import PreparationTime from "@/components/PreparationTime";
 import { recipeData } from "@/data/recipe";
 
 import Image from "next/image";
@@ -17,29 +18,11 @@ export default function Home() {
           title={recipeData.title}
           description={recipeData.description}
         />
-        <div className="flex flex-col gap-4 bg-rose-50 p-6 rounded-xl">
-          <h3 className="text-rose-800 text-preset-3">Preparation time</h3>
-          <ul className="space-y-2 text-stone-600 text-preset-4">
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-rose-800 font-bold">•</span>
-              <span>
-                <strong>Total</strong>: Approximately 10 minutes
-              </span>
-            </li>
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-rose-800 font-bold">•</span>
-              <span>
-                <strong>Preparation</strong>: 5 minutes
-              </span>
-            </li>
-            <li className="flex gap-7 items-center ml-2">
-              <span className="text-rose-800 font-bold">•</span>
-              <span>
-                <strong>Cooking</strong>: 5 minutes
-              </span>
-            </li>
-          </ul>
-        </div>
+        <PreparationTime
+          total={recipeData.preparationTime.total}
+          preparation={recipeData.preparationTime.preparation}
+          cooking={recipeData.preparationTime.cooking}
+        />
         <div className="flex flex-col gap-6">
           <h2 className="text-preset-2 text-brown-800">Ingredients</h2>
           <ul className="space-y-2 text-stone-600 text-preset-4">
