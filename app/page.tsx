@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <article className="bg-white md:mx-19 md:my-32 md:rounded-3xl md:p-10">
+    <article className="bg-white md:mx-19 md:my-32 md:rounded-3xl md:p-10 lg:max-w-[736px]">
       <Image
         src="/image-omelette.jpeg"
         alt="Omelette on a plate"
