@@ -9,14 +9,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <article className="bg-white">
+    <article className="bg-white md:mx-19 md:my-32 md:rounded-3xl md:p-10">
       <Image
         src="/image-omelette.jpeg"
         alt="Omelette on a plate"
         width={1312}
         height={600}
+        className="md:rounded-xl"
       />
-      <div className="px-8 py-10 flex flex-col gap-8">
+      <div className="px-8 py-10 md:px-0 md:pt-10 md:pb-0 flex flex-col gap-8">
         <RecipeHeader headerData={recipeData.header} />
         <PreparationTime timeData={recipeData.preparationTime} />
         <IngredientsList ingredients={recipeData.ingredients} />
